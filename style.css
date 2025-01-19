@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* all common style  */
+
+
+body{
+  font-family: Poppins;
+  font-size: 16px;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+}
+.header-logo{
+  margin: 0 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(58, 58, 58);
+}
+.nav-item-main{
+  display: flex;
+  gap: 20px;
+  
+} 
+.nav-item{
+  list-style: none;
+}
+.nav-item a{
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+.nav-icon{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: rgb(58, 58, 58);
+}
+.banner{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 40px;
+}
+.banner-title{
+  font-size: 2.5rem;
+  color: #3A3A3A;
+}
+.img-conti{
+  background-image: url("images/Circle\ design.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  .banner-left-section{
+    width: 55%;
+  }
+  .banner-left-section h1{
+    margin: 0 0;
+  }
+  .banner-left-section p{
+    width: 80%;
+    color: #3A3A3A;
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+  .banner-right-section{
+    width: auto;
+  }
+  .banner-main-img{
+    width:380px;
+    padding: 20px;
+  }
+  .banner-btn{
+    padding: 10px 30px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #E02C6D;
+  }
+/* nav responsive  */
+@media screen and (max-width: 576px) {
+  header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin: auto auto;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 997px) {
+  header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+} 
+/* banner responsive */
+@media screen and (max-width: 576px) {
+  .banner{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .banner-left-section{
+    width: auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .banner-left-section p{
+    width: 100%;
+  }
+}
