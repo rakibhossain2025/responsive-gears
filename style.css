@@ -1,132 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* all common style  */
-
 
 body{
   font-family: Poppins;
-  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
-header{
+.main-header{
   display: flex;
+  margin: 20px auto;
   justify-content: space-between;
+  margin: 0 30px;
   align-items: center;
-  margin-right: 40px;
 }
 .header-logo{
-  margin: 0 40px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: rgb(58, 58, 58);
+  font-size: 25px;
+}
+.header-logo a{
+  color: #3A3A3A;
+  text-decoration: none;
 }
 .nav-item-main{
   display: flex;
   gap: 20px;
-  
-} 
-.nav-item{
+}
+.nav-item-main li{
   list-style: none;
 }
-.nav-item a{
-  font-size: 16px;
+.nav-item-main a{
   text-decoration: none;
-  color: rgb(58, 58, 58);
+  color: #3A3A3A;
+  font-size: 14px;
+  font-weight: 400;
 }
 .nav-icon{
   display: flex;
-  gap: 20px;
   align-items: center;
-  color: rgb(58, 58, 58);
+  gap: 20px;
 }
 .banner{
-  width: auto;
   display: flex;
   justify-content: space-between;
-  margin: 50px 40px;
+  margin: 40px 30px;
+}
+.banner-left-section{
+  width: 50%; 
+}
+.banner-right-section{
+  width: 50%; 
 }
 .banner-title{
-  font-size: 2.5rem;
   color: #3A3A3A;
+  font-weight: bold;
+  font-size: 40px;
 }
-.img-conti{
+.banner-title{
+  font-size: 45px;
+  font-weight: bold;
+  color: #3A3A3A;
+  margin-bottom: 10px;
+}
+.banner-left-section p{
+  color: #3A3A3A;
+  font-size: 15px;
+  width: 80%;
+}
+.img-container{
+   display: flex;
+  align-items: center;
   background-image: url("images/Circle\ design.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  }
-  .banner-left-section{
-    width: 55%;
-  }
-  .banner-left-section h1{
-    margin: 0 0;
-  }
-  .banner-left-section p{
-    width: 80%;
-    color: #3A3A3A;
-    font-size: 1rem;
-    margin-top: 16px;
-  }
-  .banner-right-section{
-    width: auto;
-  }
-  .banner-main-img{
-    width:380px;
-    padding: 20px;
-  }
-  .banner-btn{
-    padding: 10px 30px;
-    color: white;
-    font-size: 15px;
-    border: none;
-    border-radius: 20px;
-    background-color: #E02C6D;
-  }
-/* nav responsive  */
-@media screen and (max-width: 576px) {
-  header{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 10px auto;
-  }
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    margin: auto auto;
-  }
+  background-size: cover;
+  width: 100%;
 }
-@media screen and (min-width: 576px) and (max-width: 997px) {
-  header{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 10px auto;
-  }
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-  }
-} 
-/* banner responsive */
+.banner-main-img{
+  padding: 30px;
+  width: 95%;
+}
+.company-name{
+  display: none;
+  /* border: 1px solid rgba(128, 128, 128, 0.507); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 11px rgba(255, 0, 0, 0.479);
+}
+.company-name img{
+  display: none;
+  height: 100%;
+  margin: 20px auto;
+
+}
+/* all responsive style  */
 @media screen and (max-width: 576px) {
-  .banner{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .banner-left-section{
-    width: auto;
-    text-align: center;
-    margin-top: 40px;
-  }
-  .banner-left-section p{
-    width: 100%;
-  }
+ .main-header{
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+.banner{
+ flex-direction: column-reverse;
+ width: 100%;
+ margin: 20px auto;
+ align-items: center;
+ justify-content: center;
+}
+.banner-left-section, .banner-title, p{
+ width: 100%; 
+ text-align: center; 
+ font-size: 8vw;
+}
+.banner-left-section p{
+  width: 100%;
+}
+.banner-right-section{
+ width: 100%;
+}
+.img-container{
+ background-repeat: no-repeat;
+ background-size: contain;
+ justify-content: center;
+}
+
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+ .main-header{
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+}
+/* min auto width  */
+@media screen and (min-width: 1240px) {
+ .main-header{
+   margin: 0 auto;
+   justify-content: space-around;
+}
 }
